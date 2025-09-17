@@ -1,59 +1,68 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css";
 
 const Banner = () => {
   return (
     <>
+      {/* Custom Arrows */}
+      <div className="swiper-button-prev-custom absolute top-1/2 left-12 z-50 cursor-pointer text-white text-4xl hidden md:block">
+        <Image src="/left_arrow.png" alt="before" width={24} height={24} />
+      </div>
+      <div className="swiper-button-next-custom absolute top-1/2 right-12 z-50 cursor-pointer text-white text-4xl hidden md:block">
+        <Image src="/right_arrow.png" alt="next" width={24} height={24} />
+      </div>
+
       <Swiper
+        modules={[Navigation, Pagination, A11y]}
         spaceBetween={0}
         slidesPerView={1}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-        className="h-screen w-full"
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
+        className="h-screen w-full relative"
+        navigation={{
+          prevEl: ".swiper-button-prev-custom",
+          nextEl: ".swiper-button-next-custom",
+        }}
+        pagination={{
+          clickable: true,
+          el: ".swiper-pagination-custom",
+        }}
+        loop={true}
       >
-        <SwiperSlide className="relative h-screen  w-full">
+        {/* Slide 1 */}
+        <SwiperSlide className="relative h-screen w-full">
           <div className="h-full">
-            {/* Arka plan resmi */}
-
             <div className="relative md:absolute text-center md:top-1/4 md:right-1/7 text-white max-w-lg z-50 mt-2">
-              <p className="font-bold text-[30px] md:text-7xl md:leading-[84px] font-saira_condensed tracking-tight">
+              <p className="font-bold text-[30px] md:text-7xl md:leading-[84px] font-saira_condensed tracking-tight md:text-left text-center">
                 <span className="block">TÜRKÇE RAP VE</span>
                 <span className="block">DÜNYA MÜZİK</span>
                 <span className="block text-nowrap">HABERLERİNİ TAKİP ET</span>
               </p>
 
-              <p className="font-saira mt-6 mb-8 font-normal text-sm md:text-lg px-12 md:px-0">
+              <p className="font-saira mt-6 mb-8 font-normal text-sm md:text-lg px-12 md:px-0 text-left">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi
               </p>
 
-              <button className="cursor-pointer">
+              {/* Buton */}
+              <button className="cursor-pointer md:w-full mb-8">
                 <Image
                   src="/more.png"
                   alt="Background"
-                  width={150}
-                  height={50}
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                  className="w-full h-full relative min-w-[150px] min-h-[50px]"
+                  width={136}
+                  height={38}
                 />
               </button>
+
+              {/* Pagination Dots */}
+              <div className="swiper-pagination-custom absolute bottom-0 z-[1000] hidden xl:flex space-x-4 cursor-pointer"></div>
             </div>
 
             <Image
@@ -76,32 +85,30 @@ const Banner = () => {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className="relative h-screen  w-full">
+        {/* Slide 2 */}
+        <SwiperSlide className="relative h-screen w-full">
           <div className="h-full">
-            {/* Arka plan resmi */}
-
             <div className="relative md:absolute text-center md:top-1/4 md:right-1/7 text-white md:text-black max-w-lg z-50 mt-2">
-              <p className="font-bold text-[30px] md:text-7xl md:leading-[84px] font-saira_condensed tracking-tight">
+              <p className="font-bold text-[30px] md:text-7xl md:leading-[84px] font-saira_condensed tracking-tight md:text-left text-center">
                 <span className="block">DÜNYA RAP</span>
                 <span className="block">TRENDLERİNİ</span>
                 <span className="block text-nowrap">KONUŞUYORUZ</span>
               </p>
 
-              <p className="font-saira mt-6 mb-8 font-normal text-sm md:text-lg px-12 md:px-0">
+              <p className="font-saira mt-6 mb-8 font-normal text-sm md:text-lg px-12 md:px-0 text-left">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi
               </p>
 
-              <button className="cursor-pointer">
+              {/* Buton */}
+              <button className="cursor-pointer md:w-full mb-6">
                 <Image
                   src="/more.png"
                   alt="Background"
-                  width={150}
-                  height={50}
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                  className="w-full h-full relative min-w-[150px] min-h-[50px]"
+                  width={136}
+                  height={38}
                 />
               </button>
             </div>
@@ -125,7 +132,6 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
-
       </Swiper>
     </>
   );
