@@ -2,6 +2,7 @@
 import Banner from "@/components/Banner";
 import Header from "@/components/Header";
 import Live from "@/components/Live";
+import MontlyFavorites from "@/components/MontlyFavorites";
 import Trends from "@/components/Trends";
 
 export default function Home() {
@@ -15,6 +16,9 @@ export default function Home() {
       {/* <Live /> */}
       <Live />
       <Trends />
+      {/* <MontlyFavorites /> */}
+      <MontlyFavorites />
+
     </div>
   );
 }

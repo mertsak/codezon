@@ -21,3 +21,38 @@
   width: 12px;
   height: 12px;
 }
+
+/* Swiper progress bar override */
+.custom-progress .swiper-pagination-progressbar-fill {
+  background-color: #f0e74d !important; /* Tailwind orange-500 */
+  border-radius: 9999px; /* full rounded */
+}
+
+.swiper-pagination-progressbar {
+  .swiper-horizontal > &,
+  &.swiper-pagination-horizontal,
+  .swiper-vertical > &.swiper-pagination-progressbar-opposite,
+  &.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
+    /* width: 100%; */
+    height: var(--swiper-pagination-progressbar-size, 4px);
+    left: inherit !important;
+    top: inherit !important;
+    bottom: 50px !important;
+    width: 600px !important;
+  }
+}
+
+/* Küçük ekran (max 768px) için */
+@media (max-width: 768px) {
+  .swiper-pagination-progressbar {
+    .swiper-horizontal > &,
+    &.swiper-pagination-horizontal,
+    .swiper-vertical > &.swiper-pagination-progressbar-opposite,
+    &.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
+      width: 300px !important;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}

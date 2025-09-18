@@ -34,8 +34,6 @@ const Trends = () => {
     fetchTrends();
   }, []);
 
-  console.log(trends);
-
   return (
     <div className="flex flex-col justify-center md:items-start items-center lg:px-20 px-4">
       <div className="flex justify-center items-center gap-6 md:mb-24 mb-12">
@@ -97,6 +95,14 @@ const Trends = () => {
           </div>
         ))}
       </div>
+
+      <div className="flex justify-center items-center mt-18 mb-18 w-full">
+        <button className="relative font-saira_condensed font-bold text-lg text-black px-8 py-3 bg-white transform -skew-x-12 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] cursor-pointer">
+          <span className="inline-block skew-x-12">Tümünü Gör</span>
+        </button>
+      </div>
+
+
     </div>
   );
 };
