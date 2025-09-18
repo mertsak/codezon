@@ -2,10 +2,11 @@
 import Banner from "@/components/Banner";
 import Header from "@/components/Header";
 import Live from "@/components/Live";
+import Trends from "@/components/Trends";
 
 export default function Home() {
   return (
-    <div className="relative w-full h-full md:h-screen ">
+    <div className="relative w-full h-full md:h-screen overflow-x-hidden">
       <header>
         <Header />
       </header>
@@ -13,6 +14,7 @@ export default function Home() {
       <Banner />
       {/* <Live /> */}
       <Live />
+      <Trends />
     </div>
   );
 }

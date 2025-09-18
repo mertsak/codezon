@@ -36,7 +36,7 @@ const Banner = () => {
       >
         {/* Slide 1 */}
         <SwiperSlide className="relative h-screen w-full">
-          <div className="h-full">
+          <div className="relative h-full">
             <div className="relative md:absolute text-center md:top-1/4 md:right-1/7 text-white max-w-lg z-50 mt-2">
               <p className="font-bold text-[30px] md:text-7xl md:leading-[84px] font-saira_condensed tracking-tight md:text-left text-center">
                 <span className="block">TÜRKÇE RAP VE</span>
@@ -65,29 +65,38 @@ const Banner = () => {
               <div className="swiper-pagination-custom absolute bottom-0 z-[1000] hidden xl:flex space-x-4 cursor-pointer"></div>
             </div>
 
-            <Image
-              src="/banner2.png"
-              alt="Background"
-              width={1920}
-              height={1080}
-              className="absolute top-56 md:top-0 xl:!-left-96 inset-0 md:object-[0%_30%] h-full w-full object-cover"
-            />
+            <div className="absolute top-56 md:top-0 xl:!-left-96 inset-0 h-full w-full">
+              <div className="relative h-full w-full">
+                <Image
+                  src="/banner2.png"
+                  alt="Background"
+                  fill
+                  priority
+                  quality={85}
+                  sizes="100vw"
+                  className="md:object-[0%_30%] object-cover"
+                />
+              </div>
+            </div>
 
             <div className="absolute bottom-0 left-0 w-full md:h-64 h-36">
-              <Image
-                src="/banner_under.png"
-                alt="Background"
-                width={1920}
-                height={1080}
-                className="h-full w-full object-cover"
-              />
+              <div className="relative h-full w-full">
+                <Image
+                  src="/banner_under.png"
+                  alt="Background"
+                  fill
+                  quality={85}
+                  sizes="100vw"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </SwiperSlide>
 
         {/* Slide 2 */}
         <SwiperSlide className="relative h-screen w-full">
-          <div className="h-full">
+          <div className="relative h-full">
             <div className="relative md:absolute text-center md:top-1/4 md:right-1/7 text-white md:text-black max-w-lg z-50 mt-2">
               <p className="font-bold text-[30px] md:text-7xl md:leading-[84px] font-saira_condensed tracking-tight md:text-left text-center">
                 <span className="block">DÜNYA RAP</span>
@@ -113,22 +122,30 @@ const Banner = () => {
               </button>
             </div>
 
-            <Image
-              src="/banner1.png"
-              alt="Background"
-              width={1920}
-              height={1080}
-              className="absolute top-56 md:top-0 inset-0 object-[25%_0%] h-full w-full object-cover"
-            />
+            <div className="absolute top-56 md:top-0 inset-0 h-full w-full">
+              <div className="relative h-full w-full">
+                <Image
+                  src="/banner1.png"
+                  alt="Background"
+                  fill
+                  quality={85}
+                  sizes="100vw"
+                  className="object-[25%_0%] object-cover"
+                />
+              </div>
+            </div>
 
             <div className="absolute bottom-0 left-0 w-full md:h-64 h-36">
-              <Image
-                src="/banner_under.png"
-                alt="Background"
-                width={1920}
-                height={1080}
-                className="h-full w-full object-cover"
-              />
+              <div className="relative h-full w-full">
+                <Image
+                  src="/banner_under.png"
+                  alt="Background"
+                  fill
+                  quality={85}
+                  sizes="100vw"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </SwiperSlide>
