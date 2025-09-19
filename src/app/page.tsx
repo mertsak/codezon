@@ -1,5 +1,6 @@
 // app/page.tsx
 import Banner from "@/components/Banner";
+import Discover from "@/components/Discover";
 import Header from "@/components/Header";
 import Live from "@/components/Live";
 import MontlyFavorites from "@/components/MontlyFavorites";
@@ -18,6 +19,8 @@ export default function Home() {
       <Trends />
       {/* <MontlyFavorites /> */}
       <MontlyFavorites />
+
+      <Discover />
 
     </div>
   );

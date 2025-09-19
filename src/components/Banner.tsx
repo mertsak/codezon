@@ -52,17 +52,25 @@ const Banner = () => {
               </p>
 
               {/* Buton */}
-              <button className="cursor-pointer md:w-full mb-8">
+              {/* <button className="cursor-pointer md:w-full mb-8">
                 <Image
                   src="/more.png"
                   alt="Background"
                   width={136}
                   height={38}
                 />
-              </button>
+              </button> */}
+
+              <div className="w-full flex justify-center lg:justify-start items-center">
+                <button className="font-saira_condensed font-bold text-lg text-black px-4 py-2 bg-[#F0E74D] transform -skew-x-12 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] cursor-pointer">
+                  <span className="skew-x-12 font-saira text-sm font-bold">
+                    Devamını Oku
+                  </span>
+                </button>
+              </div>
 
               {/* Pagination Dots */}
-              <div className="swiper-pagination-custom absolute bottom-0 z-[1000] hidden xl:flex space-x-4 cursor-pointer"></div>
+              <div className="swiper-pagination-custom absolute !-bottom-10 z-[1000] hidden xl:flex space-x-4 cursor-pointer"></div>
             </div>
 
             <div className="absolute top-56 md:top-0 xl:!-left-96 inset-0 h-full w-full">

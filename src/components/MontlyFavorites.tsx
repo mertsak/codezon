@@ -76,7 +76,7 @@ const MontlyFavorites = () => {
         </span>
       </div>
 
-      <div className="2xl:w-[900px] xl:w-[550px] lg:w-[500px] w-full  h-full flex justify-center items-center ml-10 lg:ml-0 pb-32 md:pb-0">
+      <div className="2xl:w-[900px] xl:w-[750px] lg:w-[500px] w-full  flex justify-center items-end ml-10 lg:ml-0 pb-32 md:pb-0">
         <Swiper
           modules={[Pagination]}
           pagination={{
@@ -86,7 +86,7 @@ const MontlyFavorites = () => {
           spaceBetween={10}
           slidesPerView={2.5} // default küçük ekran
           breakpoints={{
-            1500: {
+            1400: {
               // xl breakpoint
               slidesPerView: 2.5, // büyük ekranda 3 tane yan yana
               spaceBetween: 10,
@@ -97,6 +97,13 @@ const MontlyFavorites = () => {
               slidesPerView: 1.75, // orta ekranda 2 tane yan yana
               spaceBetween: 10,
             },
+
+            600: {
+              // md breakpoint
+              slidesPerView: 1.75, // küçük ekranda 1.5 tane yan yana
+              spaceBetween: 0,
+            },
+
             0: {
               // md breakpoint
               slidesPerView: 1.25, // küçük ekranda 1.5 tane yan yana
@@ -145,14 +152,11 @@ const MontlyFavorites = () => {
           ))}
         </Swiper>
 
-      {/* Progress bar container */}
-      <div className="custom-progress fixed mt-4 h-[8px] bg-[#2A2A2A] rounded-full overflow-hidden mb-10">
-        <span className="swiper-pagination-progressbar-fill !bg-orange-500 rounded-full"></span>
+        {/* Progress bar container */}
+        <div className="custom-progress fixed mt-4 h-[8px] bg-[#2A2A2A] rounded-full overflow-hidden mb-10">
+          <span className="swiper-pagination-progressbar-fill !bg-orange-500 rounded-full"></span>
+        </div>
       </div>
-
-      </div>
-
-
     </div>
   );
 };

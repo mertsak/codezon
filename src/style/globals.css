@@ -37,7 +37,7 @@
     height: var(--swiper-pagination-progressbar-size, 4px);
     left: inherit !important;
     top: inherit !important;
-    bottom: 50px !important;
+    bottom: 5px !important;
     width: 600px !important;
   }
 }
