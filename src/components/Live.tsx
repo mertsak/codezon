@@ -4,6 +4,7 @@ import Image from "next/image";
 const Live = () => {
   return (
     <div className="w-full h-full md:h-[600px]">
+      {/* Live center */}
       <div className="lg:absolute md:left-2/6 flex flex-col items-center mt-12">
         <div className="flex justify-center items-center -rotate-6">
           <Image
@@ -30,8 +31,6 @@ const Live = () => {
         </div>
 
         <div className="flex justify-center items-center border border-gray-700 rounded-2xl p-4 gap-2.5 -rotate-6 mt-4 z-[10]">
-
-
           <div className="flex justify-center items-center bg-[#864CF6] rounded-lg py-2.5 px-3 cursor-pointer gap-[6px] w-[105px]">
             <Image
               src="/heart.svg"
@@ -53,7 +52,6 @@ const Live = () => {
               width={16}
               height={15}
               sizes="16px"
-
             />
             <span className="text-white font-saira text-sm font-semibold">
               Abone Ol
@@ -65,15 +63,12 @@ const Live = () => {
               width={10}
               height={5}
               sizes="10px"
-
             />
-
           </div>
-
-
         </div>
       </div>
 
+      {/* Live left & right*/}
       <div className="w-full h-full flex items-center justify-between relative">
         <div className="md:w-[420px] md:h-[437px] w-[280px] h-[290px] relative z-10 2xl:ml-60">
           <Image

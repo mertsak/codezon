@@ -38,12 +38,15 @@ const Header = () => {
         </button>
       </div>
 
+      {/* Hamburger Icon */}
       <div className="md:hidden block">
-        <Image src="/hamburger_icon.png" alt="Menu Icon" width={23} height={22} />
-
+        <Image
+          src="/hamburger_icon.png"
+          alt="Menu Icon"
+          width={23}
+          height={22}
+        />
       </div>
-
-
     </div>
   );
 };

@@ -10,7 +10,7 @@ interface Discover {
     img: string;
     content: string;
     slug: string;
-    // Diğer gerekli alanlar
+   // Diğer gerekli alanlar olursa ekle
   };
 }
 

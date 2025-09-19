@@ -4,6 +4,7 @@ interface TrendPageProps {
   params: {
     slug: string;
   };
+  // Diğer gerekli alanlar olursa ekle
 }
 
 export default async function TrendPage({ params }: TrendPageProps) {

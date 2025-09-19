@@ -22,7 +22,7 @@ interface Montyly {
     img: string;
     content: string;
     slug: string;
-    // Diğer gerekli alanlar
+    // Diğer gerekli alanlar olursa ekle
   };
 }
 
@@ -67,6 +67,7 @@ const MontlyFavorites = () => {
         </div>
       </div>
 
+      {/* Left side */}
       <div className="text-center md:text-left my-12 lg:my-0">
         <span className="font-saira_condensed font-bold text-6xl lg:ml-20 block">
           AYIN
@@ -75,7 +76,7 @@ const MontlyFavorites = () => {
           FAVORİLERİ
         </span>
       </div>
-
+      {/* Right side */}
       <div className="2xl:w-[900px] xl:w-[750px] lg:w-[500px] w-full  flex justify-center items-end ml-10 lg:ml-0 pb-32 md:pb-0">
         <Swiper
           modules={[Pagination]}

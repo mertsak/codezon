@@ -15,10 +15,12 @@ const Banner = () => {
       <div className="swiper-button-prev-custom absolute top-1/2 left-12 z-50 cursor-pointer text-white text-4xl hidden md:block">
         <Image src="/left_arrow.png" alt="before" width={24} height={24} />
       </div>
+
       <div className="swiper-button-next-custom absolute top-1/2 right-12 z-50 cursor-pointer text-white text-4xl hidden md:block">
         <Image src="/right_arrow.png" alt="next" width={24} height={24} />
       </div>
 
+      {/* Swiper */}
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={0}
@@ -52,15 +54,6 @@ const Banner = () => {
               </p>
 
               {/* Buton */}
-              {/* <button className="cursor-pointer md:w-full mb-8">
-                <Image
-                  src="/more.png"
-                  alt="Background"
-                  width={136}
-                  height={38}
-                />
-              </button> */}
-
               <div className="w-full flex justify-center lg:justify-start items-center">
                 <button className="font-saira_condensed font-bold text-lg text-black px-4 py-2 bg-[#F0E74D] transform -skew-x-12 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] cursor-pointer">
                   <span className="skew-x-12 font-saira text-sm font-bold">
@@ -157,6 +150,7 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
+        
       </Swiper>
     </>
   );

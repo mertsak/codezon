@@ -9,19 +9,25 @@ import Trends from "@/components/Trends";
 export default function Home() {
   return (
     <div className="relative w-full h-full md:h-screen overflow-x-hidden">
+      {/* <Header /> */}
       <header>
         <Header />
       </header>
 
+      {/* <Banner /> */}
       <Banner />
+
       {/* <Live /> */}
       <Live />
+
+      {/* <Trends /> */}
       <Trends />
+
       {/* <MontlyFavorites /> */}
       <MontlyFavorites />
 
+      {/* <Discover /> */}
       <Discover />
-
     </div>
   );
 }

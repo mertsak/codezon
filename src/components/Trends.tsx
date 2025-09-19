@@ -11,7 +11,7 @@ interface Trend {
     img: string;
     content: string;
     slug: string;
-    // Diğer gerekli alanlar
+    // Diğer gerekli alanlar olursa ekle
   };
 }
 
@@ -101,8 +101,6 @@ const Trends = () => {
           <span className="inline-block skew-x-12">Tümünü Gör</span>
         </button>
       </div>
-
-
     </div>
   );
 };
