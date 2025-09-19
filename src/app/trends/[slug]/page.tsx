@@ -1,16 +1,16 @@
 // import { notFound } from "next/navigation";
 
 interface TrendPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
-  // Diğer gerekli alanlar olursa ekle
+  }>;
 }
 
 export default async function TrendPage({ params }: TrendPageProps) {
-  console.log(params.slug);
+  const { slug } = await params;
+  console.log(slug);
 
-  //   const res = await fetch(`https://dummyjson.com/c/a7c4-016a-47aa-8241/${params.slug}`, {
+  //   const res = await fetch(`https://dummyjson.com/c/a7c4-016a-47aa-8241/${slug}`, {
   //     cache: "no-store", // güncel veri istiyorsan
   //   });
 
