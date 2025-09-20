@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 
 export default function NotFound() {
@@ -27,7 +29,7 @@ export default function NotFound() {
           >
             Ana Sayfaya Dön
           </Link>
-          
+
           <button
             onClick={() => window.history.back()}
             className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors"

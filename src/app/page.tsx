@@ -1,3 +1,5 @@
+"use client";
+
 // app/page.tsx
 import Banner from "@/components/Banner";
 import Discover from "@/components/Discover";
