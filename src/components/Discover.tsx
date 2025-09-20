@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 interface Discover {
@@ -10,7 +11,7 @@ interface Discover {
     img: string;
     content: string;
     slug: string;
-   // Diğer gerekli alanlar olursa ekle
+    // Diğer gerekli alanlar olursa ekle
   };
 }
 
@@ -70,15 +71,15 @@ const Discover = () => {
           NE GÖRMEK İSTERSİN?
         </p>
 
-        <div className="flex lg:hidden justify-start items-center whitespace-nowrap gap-2 text-white mb-14 lg:mb-52 overflow-hidden">
+        <div className="flex lg:hidden justify-start items-center whitespace-nowrap gap-x-4 gap-y-2 text-white mb-14 lg:mb-52 overflow-hidden flex-wrap">
           <button className="flex justify-center items-center border border-white bg-transparent px-4 py-2.5 font-saira">
-            Türk Rap
+            Rap Haberleri
           </button>
           <button className="flex justify-center items-center border bg-[#F0E74D] px-4 py-2.5 font-saira font-bold text-black">
             Yabancı Rap
           </button>
           <button className="flex justify-center items-center border border-white bg-transparent px-4 py-2.5 font-saira">
-            Rap Haberleri
+            Türk Rap
           </button>
         </div>
 
@@ -87,9 +88,9 @@ const Discover = () => {
         {discover.slice(0, 5).map((dis, index) => (
           <div
             key={index}
-            className="flex lg:flex-row flex-col justify-start items-center gap-5 mb-14 lg:mb-20"
+            className="flex lg:flex-row flex-col justify-between items-stretch gap-5 mb-14 lg:mb-20 h-full"
           >
-            <div className="flex flex-col justify-center items-start gap-9 h-full">
+            <div className="flex flex-col justify-between items-start gap-9 self-stretch">
               <Image
                 src={dis.attributes.img}
                 alt="discover"
@@ -101,7 +102,7 @@ const Discover = () => {
               <p className="font-saira text-[#3b3b3b]">29 Mart 2022</p>
             </div>
 
-            <div className="flex flex-col justify-between items-start text-white h-full gap-6">
+            <div className="flex flex-col justify-between items-start text-white self-stretch gap-6">
               <div className="flex justify-center items-center gap-4">
                 <Image
                   src="/jonathan.png"
@@ -112,7 +113,7 @@ const Discover = () => {
                   className="rounded-full w-8 h-8 object-cover"
                 />
 
-                <p>Jonathan Stewart</p>
+                <p>{dis.attributes.authors}</p>
               </div>
 
               <div className="flex justify-center items-start flex-col gap-6">
@@ -124,7 +125,12 @@ const Discover = () => {
 
                 <div className="border border-[#3B3B3B] w-full"></div>
 
-                <p className="font-saira">Daha Fazla Oku</p>
+                <Link
+                  href={`/trends/${dis.attributes.slug}`}
+                  className="font-saira"
+                >
+                  Daha Fazla Oku
+                </Link>
               </div>
             </div>
           </div>
@@ -162,12 +168,11 @@ const Discover = () => {
             </button>
           </div>
 
-      <div className="flex lg:hidden justify-center items-center mt-18 mb-18 w-full">
-        <button className="relative font-saira_condensed font-bold text-lg text-black px-8 py-3 bg-white transform -skew-x-12 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] cursor-pointer">
-          <span className="inline-block skew-x-12">Tümünü Gör</span>
-        </button>
-      </div>
-
+          <div className="flex lg:hidden justify-center items-center mt-18 mb-18 w-full">
+            <button className="relative font-saira_condensed font-bold text-lg text-black px-8 py-3 bg-white transform -skew-x-12 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] cursor-pointer">
+              <span className="inline-block skew-x-12">Tümünü Gör</span>
+            </button>
+          </div>
 
           <p className="lg:text-[40px] text-[25px] font-saira_condensed text-white text-left w-full font-bold mb-5">
             GELİŞMELERDEN İLK SEN HABERDAR OL!

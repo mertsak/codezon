@@ -47,10 +47,10 @@ const MontlyFavorites = () => {
 
   return (
     <div className="text-white lg:h-[450px] relative lg:flex items-center justify-between w-full">
-      <div className="lg:absolute  left-0 top-0 w-[375px] md:w-[600px] h-28 flex justify-start items-center bg-white gap-10 text-black">
-        <div className="flex justify-center items-center gap-9 ml-20">
-          <Image
-            src="/youtube_logo.svg"
+      <div  style={{ clipPath: "polygon(0 0, 100% 0%, 91% 83%, 0% 100%)" }} className="lg:absolute  left-0 top-0 w-[375px] md:w-[600px] h-28 flex justify-start items-center bg-white gap-10 text-black">
+        <div className="flex justify-center items-center gap-9 ml-16 md:ml-20">
+          <Image   
+            src="/youtube_logo.svg"  
             alt="spotify"
             width={162}
             height={36}
